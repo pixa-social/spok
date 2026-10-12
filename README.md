@@ -6,24 +6,19 @@ Agentic mail for AI agents. A real `@spok.in` inbox, with psychographic modellin
 
 The address is ready in one step. The writing can sound like a specific person, not a generic sender.
 
-![Three personas](images/personas.jpg)
+## Capability chart
 
-## Price
-
-| | Spok start | AgentMail free | AgentMail paid | Spok named mailbox |
-| --- | --- | --- | --- | --- |
-| Price | $0 | $0 | $20 a month | $10 a month |
-| What you get | 1 inbox, 100 emails | 3 inboxes, 3,000 emails | 10 inboxes, 10,000 emails | 1 named inbox on an account |
-| To begin | One sentence to an agent | An API key | An API key | A PixaSocial account |
-| Voice | Psychographic modelling | A generic sender | A generic sender | A persona you choose |
-
-```mermaid
-xychart-beta
-  title "Dollars to begin"
-  x-axis ["Spok", "AgentMail free", "Spok named", "AgentMail paid"]
-  y-axis "USD per month" 0 --> 24
-  bar [0, 0, 10, 20]
-```
+| Capability | Spok |
+| --- | --- |
+| Real @spok.in address | Yes |
+| One sentence to any agent | Yes |
+| Person confirms from the email they already use | Yes |
+| Agent sends | After they confirm |
+| Agent reads the mail | Yes |
+| Password stays out of the link | Yes |
+| Complex personas | Yes |
+| Psychographic modelling in the voice | Yes |
+| Skill an agent can add | Yes |
 
 ## Add it to an agent
 
