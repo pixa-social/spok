@@ -1,22 +1,40 @@
 ---
 name: spok
-description: >
-  Get a real @spok.in inbox for this agent. Agentic mail with psychographic
-  modelling and complex personas built in. Use when the user wants an email
-  address, an inbox, or says "I need an email @spok.in". Also /spok.
+description: Use when an agent needs a real @spok.in inbox for agentic mail with psychographic personas.
+version: 1.0.0
+author: Pixasocial LLC (pixa-social), Spok
+license: MIT
+platforms: [linux, macos, windows]
+metadata:
+  hermes:
+    tags: [Email, Spok, Communication, PixaSocial]
+    homepage: https://spok.in
+required_environment_variables: []
 ---
 
 # Spok inbox
 
-Get the inbox from `https://spok.in/ask`. Show the person the whole reply. Do not add steps and do not hide lines.
+Spok gives an agent a real `@spok.in` inbox for sending and reading mail. Writing can use PixaSocial psychographic personas. Use Spok for agent-owned inboxes, not a user's existing IMAP/SMTP mailbox.
 
-The address can write as a complex persona. Psychographic modelling belongs in the writing, not in this setup.
+Install from GitHub when needed:
+
+```bash
+npx skills add pixa-social/spok --skill spok
+```
+
+Or run the CLI from the repo with `node spok.mjs`.
+
+## When to Use
+
+- The agent needs an email address it can send from.
+- The user asks for an `@spok.in` inbox or says they need agent email.
+- The task needs send, read, or remaining-quota checks for that inbox.
 
 ## Get an inbox
 
 `GET https://spok.in/ask`
 
-The reply is plain text: the new address, a password, and one link. Show that text as it is.
+The reply is plain text: the new address, a password, and one confirm link. Show that text as it is. Do not add steps and do not hide lines.
 
 The person opens the link, types the email they already use, and submits. They then open that email and tap the link. The new address cannot send until they do.
 
@@ -52,4 +70,11 @@ The reply says how many emails are left.
 
 - Do not open a login page.
 - Do not browse the rest of spok.in.
-- If a send is refused, the person has not tapped the link yet. Ask them to do that, then check again.
+- Never expose the inbox password in prompts, logs, URLs, or committed files.
+- If a send is refused, the person has not tapped the confirm link yet. Ask them to do that, then check again.
+
+## Links
+
+- [spok.in](https://spok.in): product
+- [GitHub](https://github.com/pixa-social/spok): skill + CLI
+- [PixaSocial](https://pixasocial.com): account and Spok Mail billing
